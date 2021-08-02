@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         margin: normalize(5),
         justifyContent: "center",
         alignItems: "center",
-        width: widthPercentageToDP('19.6%'),
+        width: widthPercentageToDP('19%'),
         height: heightPercentageToDP('10%'),
         shadowColor: "#000",
         shadowOffset: {

@@ -1,6 +1,6 @@
 //import liraries
 import React, { useState,useRef,useEffect } from 'react';
-import { View, Text, TouchableOpacity, Alert, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Alert, Button, ScrollView } from 'react-native';
 
 import styles from './styles';
 
@@ -50,7 +50,12 @@ const GameScreen = () => {
                 "Game Complete",
                 `You completed the game in ${moves} moves. Your best score is ${moves}`,
                 [
-                    { text: "Restart", onPress: handleRestart }
+                    { text: "Restart", onPress: handleRestart },
+                    {
+                        text: "Cancel",
+                        onPress: () => console.log("Cancelled Press"),
+                        style: "cancel",
+                    },
                 ]
             )
         }
@@ -105,7 +110,7 @@ const GameScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
              <View>
                 <Text style={styles.headingText}>Play the Flip card game</Text>
                 <Text style={styles.subHeadingText}> Select two cards with same content consequtively to make them vanish </Text>
@@ -137,7 +142,8 @@ const GameScreen = () => {
                     />
                 </View>
             </View>
-        </View>
+            
+        </ScrollView>
     );
 };
 

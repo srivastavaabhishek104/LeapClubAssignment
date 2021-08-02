@@ -5,17 +5,19 @@ import { fontScale, normalize } from '../../utility/device';
 // define your styles
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor:Color.white
+        flexGrow: 1,
+        //backgroundColor:Color.white
     },
     cardContainer: {
         flexDirection:"row",
         flexWrap:"wrap",
+        justifyContent:"center",
+        alignItems:"center",
         backgroundColor: Color.white,
         marginHorizontal:normalize(10),
         paddingVertical:normalize(10),
         paddingHorizontal:normalize(5),
-        shadowColor: Color.white,
+        shadowColor: Color.black,
         shadowOffset: {
             width: 0,
             height: 2,
