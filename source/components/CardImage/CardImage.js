@@ -7,12 +7,12 @@ import Card from '../CustomCard/Card';
 import styles from './styles';
 
 // create a component
-const CardImage = ({isFlipped,text,textStyle,isInActive}) => {
+const CardImage = ({isFlipped,text,isInActive}) => {
     return (
         <Card>
              {
                 !isInActive ?
-                    isFlipped ? <Text style={styles.cardDataTextStyle}>{text}</Text> : <Image resizeMode="center" source={require('../../../assets/flip.jpeg')}/> :
+                    isFlipped ? <Text style={styles.cardDataTextStyle}>{text}</Text> : <Image style={styles.imageStyle} source={require('../../../assets/flip.jpeg')}/> :
                     <Text style={styles.cardDataTextStyle}>{text}</Text>
              }
         </Card>
